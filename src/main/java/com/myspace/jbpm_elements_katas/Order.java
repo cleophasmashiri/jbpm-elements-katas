@@ -10,10 +10,11 @@ public class Order implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("Cost")
 	private java.lang.Double cost;
-	@org.kie.api.definition.type.Label("delivered")
-	private java.lang.Boolean delivered;
 	@org.kie.api.definition.type.Label("Delivery")
 	private Delivery delivery;
+
+	@org.kie.api.definition.type.Label(value = "Actions")
+	private java.util.List<java.lang.String> actions;
 
 	public Order() {
 	}
@@ -26,14 +27,6 @@ public class Order implements java.io.Serializable {
 		this.cost = cost;
 	}
 
-	public java.lang.Boolean getDelivered() {
-		return this.delivered;
-	}
-
-	public void setDelivered(java.lang.Boolean delivered) {
-		this.delivered = delivered;
-	}
-
 	public com.myspace.jbpm_elements_katas.Delivery getDelivery() {
 		return this.delivery;
 	}
@@ -42,11 +35,20 @@ public class Order implements java.io.Serializable {
 		this.delivery = delivery;
 	}
 
-	public Order(java.lang.Double cost, java.lang.Boolean delivered,
-			com.myspace.jbpm_elements_katas.Delivery delivery) {
+	public java.util.List<java.lang.String> getActions() {
+		return this.actions;
+	}
+
+	public void setActions(java.util.List<java.lang.String> actions) {
+		this.actions = actions;
+	}
+
+	public Order(java.lang.Double cost,
+			com.myspace.jbpm_elements_katas.Delivery delivery,
+			java.util.List<java.lang.String> actions) {
 		this.cost = cost;
-		this.delivered = delivered;
 		this.delivery = delivery;
+		this.actions = actions;
 	}
 
 }
