@@ -45,6 +45,12 @@
       <version>1.4.11.1</version>
       <scope>test</scope>
     </dependency>
+     <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-test</artifactId>
+        <version>7.44.0.Final</version>
+        <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
