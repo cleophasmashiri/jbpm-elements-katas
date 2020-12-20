@@ -8,12 +8,12 @@ public class Order implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Cost")
+	@org.kie.api.definition.type.Label("Cost")
 	private java.lang.Double cost;
-	@org.kie.api.definition.type.Label(value = "delivered")
+	@org.kie.api.definition.type.Label("delivered")
 	private java.lang.Boolean delivered;
-	@org.kie.api.definition.type.Label(value = "delivery")
-	private java.lang.String delivery;
+	@org.kie.api.definition.type.Label("Delivery")
+	private Delivery delivery;
 
 	public Order() {
 	}
@@ -34,16 +34,16 @@ public class Order implements java.io.Serializable {
 		this.delivered = delivered;
 	}
 
-	public java.lang.String getDelivery() {
+	public com.myspace.jbpm_elements_katas.Delivery getDelivery() {
 		return this.delivery;
 	}
 
-	public void setDelivery(java.lang.String delivery) {
+	public void setDelivery(com.myspace.jbpm_elements_katas.Delivery delivery) {
 		this.delivery = delivery;
 	}
 
 	public Order(java.lang.Double cost, java.lang.Boolean delivered,
-			java.lang.String delivery) {
+			com.myspace.jbpm_elements_katas.Delivery delivery) {
 		this.cost = cost;
 		this.delivered = delivered;
 		this.delivery = delivery;
