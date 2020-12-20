@@ -6,12 +6,47 @@ package com.myspace.jbpm_elements_katas;
 
 public class Order implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Order() {
-    }
+	@org.kie.api.definition.type.Label(value = "Cost")
+	private java.lang.Double cost;
+	@org.kie.api.definition.type.Label(value = "delivered")
+	private java.lang.Boolean delivered;
+	@org.kie.api.definition.type.Label(value = "delivery")
+	private java.lang.String delivery;
 
+	public Order() {
+	}
 
+	public java.lang.Double getCost() {
+		return this.cost;
+	}
 
+	public void setCost(java.lang.Double cost) {
+		this.cost = cost;
+	}
+
+	public java.lang.Boolean getDelivered() {
+		return this.delivered;
+	}
+
+	public void setDelivered(java.lang.Boolean delivered) {
+		this.delivered = delivered;
+	}
+
+	public java.lang.String getDelivery() {
+		return this.delivery;
+	}
+
+	public void setDelivery(java.lang.String delivery) {
+		this.delivery = delivery;
+	}
+
+	public Order(java.lang.Double cost, java.lang.Boolean delivered,
+			java.lang.String delivery) {
+		this.cost = cost;
+		this.delivered = delivered;
+		this.delivery = delivery;
+	}
 
 }
