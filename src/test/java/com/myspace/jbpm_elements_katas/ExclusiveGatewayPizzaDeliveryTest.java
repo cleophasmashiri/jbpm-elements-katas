@@ -11,14 +11,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.manager.RuntimeEngine;
-import org.kie.api.runtime.manager.RuntimeManager;
+// import org.kie.api.runtime.manager.RuntimeManager;
 import org.kie.api.runtime.process.ProcessInstance;
 import org.kie.internal.runtime.manager.context.EmptyContext;
 
 public class ExclusiveGatewayPizzaDeliveryTest extends JbpmJUnitBaseTestCase {
 
     private String processId = "jbpm-elements-katas.ExclusiveGatewayPizzaDelivery";
-    private RuntimeManager rtm;
+    // private RuntimeManager rtm;
     private RuntimeEngine engine;
     private KieSession kieSession;
 
@@ -28,7 +28,7 @@ public class ExclusiveGatewayPizzaDeliveryTest extends JbpmJUnitBaseTestCase {
 
     @Before
     public void setup() { 
-        rtm = createRuntimeManager("com/myspace/jbpm_elements_katas/ExclusiveGatewayPizzaDelivery.bpmn");
+        createRuntimeManager("com/myspace/jbpm_elements_katas/ExclusiveGatewayPizzaDelivery.bpmn");
         engine = getRuntimeEngine(EmptyContext.get());
         kieSession = engine.getKieSession();
     }
